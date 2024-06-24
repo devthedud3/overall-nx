@@ -6,7 +6,7 @@ export function Button({ name, gradient, onClick }: Button) {
               font-medium rounded 
               px-3 py-2 w-fit 
               hover:bg-zinc-700 cursor-pointer
-              ${gradient && 'gradient-border'}
+              ${gradient && 'gradient-border hover:gradient-border'}
 
               `}
     >
