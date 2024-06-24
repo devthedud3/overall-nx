@@ -1,4 +1,4 @@
-import { Button, Chip } from './common';
+import Footer from './Footer/Footer';
 import Header from './Header/Header';
 
-export { Button, Chip, Header };
+export { Footer, Header };
