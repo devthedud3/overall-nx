@@ -1,4 +1,5 @@
-import { Button, Chip, Header } from './components';
+import { Button, Chip } from './components/common';
+import { Footer, Header } from './components';
 import { FaRegSmileBeam } from 'react-icons/fa';
 import { MdDashboardCustomize } from 'react-icons/md';
 import { LuArrowBigUpDash } from 'react-icons/lu';
@@ -21,21 +22,21 @@ export default function Landing() {
           </p>
           <Chip name="25% off for the first 3 months" status="denied" active />
           <div className="flex space-x-2 pt-8">
-            {['Request Demo', 'Learn More'].map((item, index) => (
+            {['Request a demo', 'Learn More'].map((item, index) => (
               <Button key={index} name={item} gradient={index === 0} />
             ))}
           </div>
         </div>
-        <div className="border flex justify-center w-full">
-          <p>image going here</p>
+        <div className="border flex h-96 items-center justify-center w-full">
+          <p>image goes here</p>
         </div>
       </section>
       <section className="py-12 border-t border-b border-zinc-800 w-full h-fit flex justify-center">
         <div className="container flex items-center justify-between text-sm space-x-6">
           {['Earn More', 'Happier Tenants', 'More Services', 'Hassle-free'].map(
             (item, index) => (
-              <div key={index} className="block space-y-6">
-                <div className="rounded w-fit">
+              <div key={index} className="block space-y-6 ">
+                <div className="rounded w-fit ">
                   {index === 0 && <LuArrowBigUpDash size={30} color="white" />}
                   {index === 1 && <FaRegSmileBeam size={30} color="white" />}
                   {index === 2 && (
@@ -56,6 +57,7 @@ export default function Landing() {
       <section className="container w-full py-24 w-[1140px]">
         <div className="text-sm border">testing</div>
       </section>
+      <Footer />
     </div>
   );
 }
