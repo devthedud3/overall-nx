@@ -4,7 +4,7 @@
 
 
 :root {
-  --primary: pink;
+  --primary: rgb(113, 37, 255);
   --red: red;
   --green: green;
   --blue: rgb(53, 53, 255);
@@ -70,6 +70,7 @@ html {
   }
   .gradient-border::before:hover {
     background: linear-gradient(to left, #fdeff9, #ec38bc, #9743d0, #1dc1ae);
+    transform: rotate(360deg)
   }
 }
 
