@@ -4,6 +4,50 @@
   "sourceRoot": "apps/overall",
   "projectType": "application",
   "tags": [],
-  "// targets": "to see all targets run: nx show project overall --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/overall",
+        "root": "apps/overall",
+        "config": "apps/overall/next.config.js"
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "sourceMap": false,
+          "extractCss": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "overall:build"
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/overall/export",
+        "buildTarget": "overall:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/overall/**/*.ts", "apps/overall/**/*.tsx", "apps/overall/**/*.js", "apps/overall/**/*.jsx"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/overall"],
+      "options": {
+        "jestConfig": "apps/overall/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
 }
