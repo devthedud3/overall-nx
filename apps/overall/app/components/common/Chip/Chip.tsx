@@ -6,7 +6,7 @@ export function Chip({ name, active, status }: Chip) {
   const [color, setColor] = useState('');
   const colors: { [key: string]: string } = {
     pending: 'text-yellow-500 bg-yellow-100',
-    approved: 'text-green-500 bg-green-100',
+    approved: 'text-zinc-800 bg-green-100',
     denied: 'text-red-500 bg-red-100',
   };
 
@@ -20,7 +20,7 @@ export function Chip({ name, active, status }: Chip) {
         !active && 'opacity-20 grayscale'
       } ${color}`}
     >
-      <p className="">{name.toLocaleUpperCase()}</p>
+      <p className="font-black">{name.toLocaleUpperCase()}</p>
     </div>
   );
 }
