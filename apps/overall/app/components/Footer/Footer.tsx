@@ -26,7 +26,7 @@ export function Footer() {
                 );
               })}
             </div>
-            <p className="gradient-border animate-pulse text-xs w-fit px-3 py-1 border border-black rounded h-fit flex items-center bg-[--primary] text-white font-bold">
+            <p className="gradient-border animate-pulse text-xs w-fit px-3 py-1 border border-black rounded h-fit flex items-center text-white font-bold">
               <span className="animate-pulse inline-flex h-3 w-3 rounded-full bg-lime-600 mr-2" />
               IN DEVELOPMENT
             </p>
