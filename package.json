@@ -2,7 +2,10 @@
   "name": "@overall/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:next-app": "nx build overall",
+    "export:next-app": "nx export overall"
+  },
   "private": true,
   "dependencies": {
     "next": "14.2.3",
@@ -11,6 +14,8 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@nrwl/next": "^19.3.1",
+    "@nrwl/nx": "^7.8.7",
     "@nx/cypress": "19.3.1",
     "@nx/eslint": "19.3.1",
     "@nx/eslint-plugin": "19.3.1",
