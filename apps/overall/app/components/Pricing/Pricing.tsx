@@ -43,7 +43,10 @@ export function Pricing() {
               <p className="pb-6">{item.description}</p>
               <div className="pb-6 opacity-50 space-y-2">
                 {item.features.map((feature, index) => (
-                  <div className="flex items-center space-x-2">
+                  <div
+                    className="flex items-center space-x-2"
+                    key={`${feature}${index}`}
+                  >
                     {feature !== '-' ? IC['check'] : IC['notCheck']}
                     <p key={`${feature}${index}`}>{feature}</p>
                   </div>
