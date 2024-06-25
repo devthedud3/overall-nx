@@ -7,5 +7,7 @@ interface Chip {
 interface Button {
   name: string;
   onClick?: () => void;
+  outlined?: boolean;
+  fullWidth?: boolean;
   gradient?: boolean;
 }
